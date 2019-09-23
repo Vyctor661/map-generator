@@ -67,7 +67,7 @@ export const createNoiseDataGenerator = (
     return () => {
       context.save()
       context.clip()
-      context.drawImage(canvas as HTMLCanvasElement, 0, 0, width, height)
+      context.drawImage(canvas as unknown as HTMLCanvasElement, 0, 0, width, height)
       context.restore()
     }
   }
